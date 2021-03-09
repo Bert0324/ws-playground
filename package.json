@@ -4,12 +4,13 @@
   "description": "ws-playground",
   "scripts": {
     "dev:client": "http-server ./client",
-    "dev:server": "ts-node ./server/app.ts",
+    "dev:server": "nodemon -e ts -w ./server -x ts-node ./server/app.ts",
     "dev": "yarn dev:client && yarn dev:server"
   },
   "devDependencies": {
     "@types/ws": "^7.4.0",
     "http-server": "^0.12.3",
+    "nodemon": "^2.0.7",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   },

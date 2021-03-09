@@ -1,4 +1,4 @@
-const socket = new WebSocket('ws://127.0.0.1:8080');
+const socket = new WebSocket('ws://localhost:8080');
 
 socket.addEventListener('open', e => {
     console.log('opened', e);
