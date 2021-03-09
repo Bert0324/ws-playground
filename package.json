@@ -1,19 +1,19 @@
 {
   "name": "ws-playground",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "ws-playground",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:client": "http-server ./client",
+    "dev:server": "ts-node ./server/app.ts",
+    "dev": "yarn dev:client && yarn dev:server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Bert0324/ws-playground.git"
+  "devDependencies": {
+    "@types/ws": "^7.4.0",
+    "http-server": "^0.12.3",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Bert0324/ws-playground/issues"
-  },
-  "homepage": "https://github.com/Bert0324/ws-playground#readme"
+  "dependencies": {
+    "ws": "^7.4.4"
+  }
 }
