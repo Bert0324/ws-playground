@@ -1,6 +1,6 @@
-import WebSocket from 'ws';
+import { Server } from 'ws';
 
-new WebSocket.Server({ port: 8080 }).on('connection', socket => {
+new Server({ port: 8080 }).on('connection', socket => {
     socket.on('message', msg => {
         console.log(msg);
         socket.send('124');
